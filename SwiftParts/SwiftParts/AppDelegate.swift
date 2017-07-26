@@ -13,13 +13,17 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let myTabBarController: TabBarController = TabBarController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let viewController = ViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
-        self.window?.rootViewController = navigationController
+//        let viewController = ViewController()
+//        let navigationController = UINavigationController(rootViewController: viewController)
+//        self.window?.rootViewController = navigationController
+//        self.window?.makeKeyAndVisible()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = myTabBarController
         self.window?.makeKeyAndVisible()
         
         return true

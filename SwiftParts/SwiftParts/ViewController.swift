@@ -16,8 +16,6 @@ class ViewController: UIViewController {
         self.title = "FirstView"
         self.view.backgroundColor = UIColor.white
         
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
