@@ -13,17 +13,21 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let myTabBarController: TabBarController = TabBarController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        let viewController = ViewController()
-//        let navigationController = UINavigationController(rootViewController: viewController)
-//        self.window?.rootViewController = navigationController
-//        self.window?.makeKeyAndVisible()
+        //        let viewController = ViewController()
+        //        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        let viewController = ViewController()
+        let infoViewController = InfoViewController()
+        
+        let tabBarController: TabBarController = TabBarController()
+        let tabs = [viewController,infoViewController]
+        tabBarController.setViewControllers(tabs as? [ViewController], animated: false)
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = myTabBarController
+        self.window?.rootViewController = tabBarController
         self.window?.makeKeyAndVisible()
         
         return true
