@@ -16,14 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //        let viewController = ViewController()
-        //        let navigationController = UINavigationController(rootViewController: viewController)
         
         let viewController = ViewController()
         let infoViewController = InfoViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
+
         
         let tabBarController: TabBarController = TabBarController()
-        let tabs = [viewController,infoViewController]
+        let tabs = [navigationController,infoViewController]
         tabBarController.setViewControllers(tabs as? [ViewController], animated: false)
         
         window = UIWindow(frame: UIScreen.main.bounds)
