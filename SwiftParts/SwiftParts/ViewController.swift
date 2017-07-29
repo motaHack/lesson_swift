@@ -12,11 +12,11 @@ class ViewController: UIViewController {
     
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "FirstView"
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.blue
+        self.title = "top"
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
