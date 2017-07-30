@@ -18,13 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let viewController = ViewController()
+        viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         let infoViewController = InfoViewController()
+        infoViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 2)
+        
         let navigationController = UINavigationController(rootViewController: viewController)
-        let viewControlers = [navigationController,infoViewController]
+        let viewControllers = [navigationController,infoViewController]
 
         let tabBarController: TabBarController = TabBarController()
-        
-        
+        tabBarController.setViewControllers(viewControllers, animated: false)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = tabBarController
