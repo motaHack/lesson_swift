@@ -20,12 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let viewController = ViewController()
         let infoViewController = InfoViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
+        let viewControlers = [navigationController,infoViewController]
 
-        
         let tabBarController: TabBarController = TabBarController()
-        let tabs = [navigationController,infoViewController]
-        tabBarController.setViewControllers(tabs as? [ViewController], animated: false)
-        viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag:1)
+        
+        
         
         window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = tabBarController
