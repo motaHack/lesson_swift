@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.blue
         self.title = "top"
-        
     }
     
 

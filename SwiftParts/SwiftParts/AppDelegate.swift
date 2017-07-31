@@ -16,13 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
         let viewController = ViewController()
-        viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        let navigationController = UINavigationController(rootViewController: viewController)
         let infoViewController = InfoViewController()
+        navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         infoViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 2)
         
-        let navigationController = UINavigationController(rootViewController: viewController)
         let viewControllers = [navigationController,infoViewController]
 
         let tabBarController: TabBarController = TabBarController()
