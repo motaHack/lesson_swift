@@ -10,13 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
+    let titleName: String
+    
     override func viewDidLoad() {
+        
         self.view.backgroundColor = UIColor.blue
-        self.title = "top"
     }
     
-
+    init(titleName: String) {
+        
+        self.titleName = titleName
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
