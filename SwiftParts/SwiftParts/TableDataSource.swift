@@ -8,10 +8,11 @@
 
 import UIKit
 
+typealias TableViewCell = (_ cell: UITableViewCell, _ item: NSObject) -> Void
+
 class TableDataSource: NSObject {
     
     var items = [NSObject]()
-    
 }
 
 extension TableDataSource: UITableViewDataSource {
