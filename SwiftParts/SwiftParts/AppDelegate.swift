@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         infoViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 2)
         
+        
+        
         let viewControllers = [navigationController,infoViewController]
 
         let tabBarController: TabBarController = TabBarController()
