@@ -16,7 +16,6 @@
 		5A35447E1F263D8D00C65BFB /* SwiftPartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35447D1F263D8D00C65BFB /* SwiftPartsTests.swift */; };
 		5A3544891F263D8D00C65BFB /* SwiftPartsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3544881F263D8D00C65BFB /* SwiftPartsUITests.swift */; };
 		5A7CD37D1F28E0D900A44E8E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7CD37C1F28E0D900A44E8E /* InfoViewController.swift */; };
-		5A7CD37F1F28E16200A44E8E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7CD37E1F28E16200A44E8E /* TabBarController.swift */; };
 		5A879F771F30B1BD00F303F0 /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A879F761F30B1BC00F303F0 /* TableData.swift */; };
 		5A879F7B1F30B86F00F303F0 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A879F7A1F30B86F00F303F0 /* TableDataSource.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +53,6 @@
 		5A3544881F263D8D00C65BFB /* SwiftPartsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPartsUITests.swift; sourceTree = "<group>"; };
 		5A35448A1F263D8D00C65BFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A7CD37C1F28E0D900A44E8E /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		5A7CD37E1F28E16200A44E8E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5A879F761F30B1BC00F303F0 /* TableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
 		5A879F7A1F30B86F00F303F0 /* TableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +113,6 @@
 				5A3544741F263D8C00C65BFB /* Info.plist */,
 				5A35446C1F263D8C00C65BFB /* SwiftParts.xcdatamodeld */,
 				5A7CD37C1F28E0D900A44E8E /* InfoViewController.swift */,
-				5A7CD37E1F28E16200A44E8E /* TabBarController.swift */,
 				5A879F761F30B1BC00F303F0 /* TableData.swift */,
 				5A879F7A1F30B86F00F303F0 /* TableDataSource.swift */,
 			);
@@ -279,7 +276,6 @@
 				5A3544681F263D8C00C65BFB /* ViewController.swift in Sources */,
 				5A3544661F263D8C00C65BFB /* AppDelegate.swift in Sources */,
 				5A7CD37D1F28E0D900A44E8E /* InfoViewController.swift in Sources */,
-				5A7CD37F1F28E16200A44E8E /* TabBarController.swift in Sources */,
 				5A35446E1F263D8C00C65BFB /* SwiftParts.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
