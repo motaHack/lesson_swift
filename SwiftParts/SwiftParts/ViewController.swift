@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         self.view.backgroundColor = UIColor.blue
+        myTableViewController(style: .plain)
+        
     }
     
 //    init(titleName: String) {
