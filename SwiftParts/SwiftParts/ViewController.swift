@@ -5,29 +5,29 @@
 //  Created by YS on 2017/07/24.
 //  Copyright © 2017年 YS. All rights reserved.
 //
+//  http://qiita.com/eKushida/items/92f1fcff65c92e7cc332l
+//　ViewController肥大化防止を学ぶため、このページの写経です。
 
 import UIKit
 
 class ViewController: UIViewController {
 
-    let myTableViewController = UITableViewController()
+    var titleName: String
     
     override func viewDidLoad() {
         
         self.view.backgroundColor = UIColor.blue
-        myTableViewController(style: .plain)
-        
     }
     
-//    init(titleName: String) {
-//        
-//        self.titleName = titleName
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    init(titleName: String) {
+        
+        self.titleName = titleName
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
