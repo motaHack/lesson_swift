@@ -31,8 +31,19 @@ extension TableDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
+
+    func tableView(tableVeiew: UITableView, cellForRowAt  indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableVeiew.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath as IndexPath)
+        
+        if let configureCellBlock = self.configureCellBlock {
+            configureCellBlock(cell: cell, item: self.itemAtIndexPath(indexPath))
+        }
+        
+        return cell
+    }
     
-    func tableView(tableVeiew: UITableView, _: cellForRowAtIndexPath, indexPath: NSIndexPath) -> UITableViewCell {
+    private func itemAtIndexPath(indexPath: NSIndexPath) -> NSObject {
     
+        return items[indexPath.row]
     }
 }
