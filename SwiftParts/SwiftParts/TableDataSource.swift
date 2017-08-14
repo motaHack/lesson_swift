@@ -8,18 +8,18 @@
 //　このページの写経です。
 
 
-
 import UIKit
 
 typealias TableViewCellConfigureBlock = (_ cell: UITableViewCell, _ item: NSObject) -> Void
+
 
 class TableDataSource: NSObject {
     
     var items = [NSObject]()
     var cellIdentifier = ""
-    var configureCellBlock: TableViewCellConfigureBlock
+    var configureCellBlock: TableViewCellConfigureBlock?
     
-    init(items: [TabelData], cellIdentifier: String, configureCellBlock: @escaping TableViewCellConfigureBlock) {
+    init(items: [TableData], cellIdentifier: String, configureCellBlock: @escaping TableViewCellConfigureBlock) {
         self.items = items
         self.cellIdentifier = cellIdentifier
         self.configureCellBlock = configureCellBlock
@@ -32,11 +32,11 @@ extension TableDataSource: UITableViewDataSource {
         return items.count
     }
 
-    func tableView(tableVeiew: UITableView, cellForRowAt  indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableVeiew: UITableView, cellForRowAt  indexPath: IndexPath) -> UITableViewCell {
         let cell = tableVeiew.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath as IndexPath)
         
         if let configureCellBlock = self.configureCellBlock {
-            configureCellBlock(cell: cell, item: self.itemAtIndexPath(indexPath))
+            configureCellBlock(cell, self.itemAtIndexPath(indexPath: indexPath as NSIndexPath))
         }
         
         return cell

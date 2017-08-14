@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabelData: NSObject {
+class TableData: NSObject {
     var title = ""
     
     init(title: String) {
