@@ -23,12 +23,13 @@ class ViewController: UIViewController {
     
     private func setup() {
         
-        dataSource = ItemDataSource(items: [TableData(title: "りんご"),TableData(title: "ぶどう") {cell,item) in
-            if let cell = cell as? ItemCell, let item = item as? TableData {
-                cell.item = item
+        dataSource = TableDataSource(items: [TableData(title: "りんご"),TableData(title: "ぶどう")],
+                                    cellIdentifier: "ItemCell") { (cell,item) in
+            if let cell = cell as? TableViewCell, let item = item as? TableData {
+                cell.titleLabel = item
             }
-            }
-            ])
+        }
+        myTableView.dataSource = dataSource
     }
     
     override func didReceiveMemoryWarning() {
