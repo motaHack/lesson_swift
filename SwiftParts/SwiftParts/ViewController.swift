@@ -11,29 +11,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var titleName: String
+    
+    var myTableView = UITableView()
+    var dataSource: TableDataSource?
     
     override func viewDidLoad() {
         
-        self.view.backgroundColor = UIColor.blue
+        super.viewDidLoad()
+        self.setup()
     }
     
-    init(titleName: String) {
+    private func setup() {
         
-        self.titleName = titleName
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        dataSource = ItemDataSource(items: [TableData(title: "りんご"),TableData(title: "ぶどう") {cell,item) in
+            if let cell = cell as? ItemCell, let item = item as? TableData {
+                cell.item = item
+            }
+            }
+            ])
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
