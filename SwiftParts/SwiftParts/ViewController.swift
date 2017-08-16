@@ -24,9 +24,9 @@ class ViewController: UIViewController {
     private func setup() {
         
         dataSource = TableDataSource(items: [TableData(title: "りんご"),TableData(title: "ぶどう")],
-                                    cellIdentifier: "ItemCell") { (cell,item) in
-            if let cell = cell as? TableViewCell, let item = item as? TableData {
-                cell.titleLabel = item
+                                    cellIdentifier: "ItemCell") { (cell,tableData) in
+            if let cell = cell as? TableViewCell, let tableData = tableData as? TableData {
+                cell.tableData = tableData
             }
         }
         myTableView.dataSource = dataSource
