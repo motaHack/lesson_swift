@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         self.setup()
+        print("viewdidload")
     }
     
     private func setup() {
@@ -29,6 +30,8 @@ class ViewController: UIViewController {
                 cell.tableData = tableData
             }
         }
+        
+        myTableView = UITableView(frame:CGRect(x:0,y:0,width:self.view.bounds.width,height:self.view.bounds.height),style:.plain)
         myTableView.dataSource = dataSource
     }
     
