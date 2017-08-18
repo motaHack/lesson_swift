@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     var myTableView = UITableView()
     var dataSource: TableDataSource?
+    let tableViewDelegate = TableViewDelegate()
     
     override func viewDidLoad() {
         
@@ -27,12 +28,14 @@ class ViewController: UIViewController {
         dataSource = TableDataSource(items: [TableData(title: "りんご"),TableData(title: "ぶどう")],
                                     cellIdentifier: "ItemCell") { (cell,tableData) in
             if let cell = cell as? TableViewCell, let tableData = tableData as? TableData {
+                myTableView.register(cell, forCellReuseIdentifier: "MyCell")
                 cell.tableData = tableData
             }
         }
         
-        myTableView = UITableView(frame:CGRect(x:0,y:0,width:self.view.bounds.width,height:self.view.bounds.height),style:.plain)
+        myTableView = UITableView(frame:CGRect(x:0,y:0,width:self.view.bounds.width,height:self.view.bounds.height))
         myTableView.dataSource = dataSource
+        myTableView.delegate = tableViewDelegate
     }
     
     override func didReceiveMemoryWarning() {
