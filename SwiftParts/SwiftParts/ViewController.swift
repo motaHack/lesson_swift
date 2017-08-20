@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         dataSource = TableDataSource(items: [TableData(title: "りんご"),TableData(title: "ぶどう")],
                                     cellIdentifier: "ItemCell") { (cell,tableData) in
             if let cell = cell as? TableViewCell, let tableData = tableData as? TableData {
-                myTableView.register(cell, forCellReuseIdentifier: "MyCell")
                 cell.tableData = tableData
             }
         }
