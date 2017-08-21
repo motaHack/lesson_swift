@@ -12,24 +12,7 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        let viewController = ViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
-        let infoViewController = InfoViewController()
-        navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
-        infoViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 2)     
-
-        let viewControllers = [navigationController,infoViewController]
-
-        let tabBarController: TabBarController = TabBarController()
-        tabBarController.setViewControllers(viewControllers, animated: false)
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = tabBarController
-        self.window?.makeKeyAndVisible()
         
         return true
     }

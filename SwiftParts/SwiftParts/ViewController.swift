@@ -25,8 +25,9 @@ class ViewController: UIViewController {
     
     private func setup() {
         
+//        myTableView.register(TableViewCell.self, forCellReuseIdentifier: "myCell")
         dataSource = TableDataSource(items: [TableData(title: "りんご"),TableData(title: "ぶどう")],
-                                    cellIdentifier: "ItemCell") { (cell,tableData) in
+                                    cellIdentifier: "myCell") { (cell,tableData) in
             if let cell = cell as? TableViewCell, let tableData = tableData as? TableData {
                 cell.tableData = tableData
             }
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
         myTableView = UITableView(frame:CGRect(x:0,y:0,width:self.view.bounds.width,height:self.view.bounds.height))
         myTableView.dataSource = dataSource
         myTableView.delegate = tableViewDelegate
+        self.view.addSubview(myTableView)
     }
     
     override func didReceiveMemoryWarning() {
