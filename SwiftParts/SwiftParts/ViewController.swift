@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     
     private func setup() {
         
-//        myTableView.register(TableViewCell.self, forCellReuseIdentifier: "myCell")
         dataSource = TableDataSource(items: [TableData(title: "りんご"),TableData(title: "ぶどう")],
                                     cellIdentifier: "myCell") { (cell,tableData) in
             if let cell = cell as? TableViewCell, let tableData = tableData as? TableData {
