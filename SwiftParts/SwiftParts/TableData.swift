@@ -14,5 +14,4 @@ class TableData: NSObject {
     init(title: String) {
         self.title = title
     }
-
 }
