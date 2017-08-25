@@ -12,11 +12,11 @@ class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     
-    var tableData: TableData? {
+    var item: TableData? {
         didSet {
             
-            if let tableData = tableData {
-            self.titleLabel.text = tableData.title
+            if let item = item {
+                self.titleLabel.text = item.title
             }
         }
     }
